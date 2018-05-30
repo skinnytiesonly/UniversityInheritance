@@ -1,0 +1,35 @@
+
+namespace UniversityInventoryEx1
+{
+    public class Administrators: Staff, IAdmin
+    {
+        public Administrators()
+        {
+            Name = "AdministratorsAnonymous";
+            Salary = 40000.00;
+        }
+
+        public Administrators(string name)
+        {
+            Name = name;
+            Salary = 40000.00;
+        }
+
+        public Administrators(double salary)
+        {
+            Name = "AdministratorsAnonymous";
+            Salary = salary;
+        }
+
+        public Administrators(string name, double salary)
+        {
+            Name = name;
+            Salary = salary;
+        }
+
+        public override void Administrate()
+        {
+            Console.WriteLine("Administrators Administration() function initiated.");
+        }
+    }
+}
