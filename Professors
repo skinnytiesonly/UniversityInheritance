@@ -1,0 +1,34 @@
+namespace UniversityInventoryEx1
+{
+    public class Professors: Staff, ITeachable
+    {
+        public Professors()
+        {
+            Name = "ProfessorsAnonymous";
+            Salary = 30000.00;
+        }
+
+        public Professors(string name)
+        {
+            Name = name;
+            Salary = 30000.00;
+        }
+
+        public Professors(double salary)
+        {
+            Name = "ProfessorsAnonymous";
+            Salary = salary;
+        }
+
+        public Professors(string name, double salary)
+        {
+            Name = name;
+            Salary = salary;
+        }
+
+        public override void Teach()
+        {
+            Console.WriteLine("Professor Teach() function iniitiated.");
+        }
+    }
+}
