@@ -1,0 +1,40 @@
+namespace UniversityInventoryEx1
+{
+    public class Dean : Staff, ITeachable, IAdmin
+    {
+
+        public Dean()
+        {
+            Name = "DeanAnonymous";
+            Salary = 45000.00;
+        }
+
+        public Dean(string name)
+        {
+            Name = name;
+            Salary = 45000.00;
+        }
+
+        public Dean(double salary)
+        {
+            Name = "DeanAnonymous";
+            Salary = salary;
+        }
+
+        public Dean(string name, double salary)
+        {
+            Name = name;
+            Salary = salary;
+        }
+
+        public override void Teach()
+        {
+            Console.WriteLine("Dean Teach() function iniitiated.");
+        }
+
+        public override void Administrate()
+        {
+            Console.WriteLine("Dean Administration() function initiated.");
+        }
+    }
+}
