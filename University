@@ -1,0 +1,23 @@
+
+namespace UniversityInventoryEx1
+{
+    public class University
+    {
+        public Departments[] departments = new Departments[4];
+
+        public University()
+        {
+          for (int i = 0; i < 4; i++)
+            {
+                departments[i] = new Departments();
+            }
+        }
+        
+
+        /*department[0] = Math
+         *department[1] = English
+         *department[2] = Geography
+         *department[3] = ComputerScience
+        */
+    }
+}
