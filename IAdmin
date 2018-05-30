@@ -1,0 +1,8 @@
+
+namespace UniversityInventoryEx1
+{
+    interface IAdmin
+    {
+        void Administrate();
+    }
+}
