@@ -1,0 +1,44 @@
+
+namespace UniversityInventoryEx1
+{
+    public class Researchers: Staff, ITeachable
+    {
+        public enum ResearchSpecialty { none, Nueroscience, Aeronautics, ModernPhilosophy};
+        public ResearchSpecialty areaOfStudy;
+
+        public Researchers()
+        {
+            Name = "ResearchersAnonymous";
+            Salary = 35000.00;
+            areaOfStudy = ResearchSpecialty.none;
+        }
+
+        public Researchers(string name)
+        {
+            Name = name;
+            Salary = 35000.00;
+            areaOfStudy = ResearchSpecialty.none;
+        }
+
+        public Researchers(double salary)
+        {
+            Name = "ResearchersAnonymous";
+            Salary = salary;
+            areaOfStudy = ResearchSpecialty.none;
+        }
+
+        public Researchers(string name, double salary)
+        {
+            Name = name;
+            Salary = salary;
+            areaOfStudy = ResearchSpecialty.none;
+        }
+
+      
+
+        public override void Teach()
+        {
+            Console.WriteLine("Researchers Teach() function iniitiated.");
+        }
+    }
+}
