@@ -1,0 +1,26 @@
+namespace UniversityInventoryEx1
+{
+    public class Staff //IAdmin, ITeachable
+    {
+        public string Name { get; set; }
+        public double Salary { get; set; }
+
+        //default constructor
+        public Staff()
+        {
+            Name = "StaffAnonymous";
+            Salary = 20000.00;    
+        }
+
+        public virtual void Teach()
+        {
+            //nothing
+        }
+
+        public virtual void Administrate()
+        {
+            //nothing
+        }
+
+    }
+}
