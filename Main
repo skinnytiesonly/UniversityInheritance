@@ -1,0 +1,58 @@
+ class Program
+    {
+        /*department[0] = Math
+         *department[1] = English
+         *department[2] = Geography
+         *department[3] = ComputerScience
+        */
+
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Testing:");
+
+            var u = new University();
+
+            Console.WriteLine(u.departments[2].staff[3].Name);
+            Console.WriteLine(u.departments[2].staff[3].Salary);
+            u.departments[1].staff[0] = new Researchers("Andy");
+
+            Console.WriteLine("_______________________________________");
+
+            Console.WriteLine("Testing the Researchers class");
+
+            Console.WriteLine(u.departments[1].staff[0].Name);
+            Console.WriteLine(u.departments[1].staff[0].Salary);
+            u.departments[1].staff[0].Teach();
+
+            Console.WriteLine("_______________________________________");
+
+            Console.WriteLine("Testing the Dean class");
+
+            u.departments[3].staff[1] = new Dean("John", 50000.00);
+            Console.WriteLine(u.departments[3].staff[1].Name);
+            Console.WriteLine(u.departments[3].staff[1].Salary);
+            u.departments[3].staff[1].Administrate();
+            u.departments[3].staff[1].Teach();
+
+            Console.WriteLine("_______________________________________");
+
+            Console.WriteLine("Testing the Professors class");
+            u.departments[0].staff[1] = new Professors("Allen", 10000.00);
+            Console.WriteLine(u.departments[0].staff[1].Name);
+            Console.WriteLine(u.departments[0].staff[1].Salary);
+            u.departments[0].staff[1].Teach();
+
+            Console.WriteLine("_______________________________________");
+
+            Console.WriteLine("Testing the Administrators class");
+            u.departments[2].staff[1] = new Administrators("Trey");
+            Console.WriteLine(u.departments[2].staff[1].Name);
+            Console.WriteLine(u.departments[2].staff[1].Salary);
+            u.departments[2].staff[1].Administrate();
+
+
+
+
+        }
+    }
+}
